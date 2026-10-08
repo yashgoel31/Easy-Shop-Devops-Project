@@ -1,0 +1,17 @@
+﻿apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: easyshop-monitor
+  namespace: easyshop
+  labels:
+    release: prometheus
+    app: easyshop
+spec:
+  selector:
+    matchLabels:
+      app: easyshop
+  endpoints:
+  - port: http
+    path: /api/health
+    interval: 15s
+    scrapeTimeout: 10s
