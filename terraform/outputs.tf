@@ -1,4 +1,4 @@
-output "region" {
+﻿output "region" {
   description = "The AWS region where resources are created"
   value       = local.region
 }
@@ -28,4 +28,13 @@ output "public_ip" {
 output "eks_node_group_public_ips" {
   description = "Public IPs of the EKS node group instances"
   value       = data.aws_instances.eks_nodes.public_ips
+}
+output "s3_assets_bucket_id" {
+  description = "The name of the assets S3 bucket"
+  value       = aws_s3_bucket.easyshop_assets.id
+}
+
+output "s3_assets_bucket_arn" {
+  description = "The ARN of the assets S3 bucket"
+  value       = aws_s3_bucket.easyshop_assets.arn
 }
