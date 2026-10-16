@@ -1,4 +1,4 @@
-# 🛍️ EasyShop - Modern E-commerce Platform
+﻿# ðŸ›ï¸ EasyShop - Modern E-commerce Platform
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.1.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -8,19 +8,30 @@
 
 EasyShop is a modern, full-stack e-commerce platform built with Next.js 14, TypeScript, and MongoDB. It features a beautiful UI with Tailwind CSS, secure authentication, real-time cart updates, and a seamless shopping experience.
 
-## ✨ Features
 
-- 🎨 Modern and responsive UI with dark mode support
-- 🔐 Secure JWT-based authentication
-- 🛒 Real-time cart management with Redux
-- 📱 Mobile-first design approach
-- 🔍 Advanced product search and filtering
-- 💳 Secure checkout process
-- 📦 Multiple product categories
-- 👤 User profiles and order history
-- 🌙 Dark/Light theme support
+## ðŸ“š Documentation & Guides
+- [Architecture & Design](docs/ARCHITECTURE.md)
+- [Kubernetes Operations](docs/KUBERNETES.md)
+- [CI/CD Pipeline](docs/CI_CD_PIPELINE.md)
+- [Observability & Monitoring](docs/MONITORING.md)
+- [Backup & Disaster Recovery](docs/BACKUP_AND_RESTORE.md)
+- [Troubleshooting Runbook](docs/TROUBLESHOOTING.md)
+- [API Reference](docs/API_REFERENCE.md)
+- [Contributing](CONTRIBUTING.md)
 
-## 🏗️ Architecture
+## âœ¨ Features
+
+- ðŸŽ¨ Modern and responsive UI with dark mode support
+- ðŸ” Secure JWT-based authentication
+- ðŸ›’ Real-time cart management with Redux
+- ðŸ“± Mobile-first design approach
+- ðŸ” Advanced product search and filtering
+- ðŸ’³ Secure checkout process
+- ðŸ“¦ Multiple product categories
+- ðŸ‘¤ User profiles and order history
+- ðŸŒ™ Dark/Light theme support
+
+## ðŸ—ï¸ Architecture
 
 EasyShop follows a three-tier architecture pattern:
 
@@ -88,7 +99,7 @@ sudo ./aws/install
 - **Default output format:**<br/>
 
 > [!NOTE] 
-> Make sure the IAM user you're using has the necessary permissions. You’ll need an AWS IAM Role with programmatic access enabled, along with the Access Key and Secret Key.
+> Make sure the IAM user you're using has the necessary permissions. Youâ€™ll need an AWS IAM Role with programmatic access enabled, along with the Access Key and Secret Key.
 
 ## Getting Started
 
@@ -178,7 +189,7 @@ sudo systemctl status jenkins
 > ```
 #### 4. **Install Essential Plugins:**
 > - Navigate to:
-> **Manage Jenkins → Plugins → Available Plugins**<br/>
+> **Manage Jenkins â†’ Plugins â†’ Available Plugins**<br/>
 > - Search and install the following:<br/>
 >   - **Docker Pipeline**<br/>
 >   - **Pipeline View**
@@ -188,7 +199,7 @@ sudo systemctl status jenkins
 >
 > - GitHub Credentials:
 >   - Go to:
-**Jenkins → Manage Jenkins → Credentials → (Global) → Add Credentials**
+**Jenkins â†’ Manage Jenkins â†’ Credentials â†’ (Global) â†’ Add Credentials**
 > - Use:
 >   - Kind: **Username with password**
 >   - ID: **github-credentials**<br/>
@@ -205,7 +216,7 @@ sudo systemctl status jenkins
 #### 6. Jenkins Shared Library Setup:
 > - `Configure Trusted Pipeline Library`:
 >   - Go to:
-> **Jenkins → Manage Jenkins → Configure System**
+> **Jenkins â†’ Manage Jenkins â†’ Configure System**
 > Scroll to Global Pipeline Libraries section
 >
 > - **Add a New Shared Library:** 
@@ -249,14 +260,14 @@ sudo systemctl status jenkins
 > 
 > > **Setup Webhook**<br/>
 > > In GitHub:<br/>
-> >  * Go to **`Settings` → `Webhooks`**<br/>
+> >  * Go to **`Settings` â†’ `Webhooks`**<br/>
 > >  * Add a new webhook pointing to your Jenkins URL<br/>
 > >  * Select: **`GitHub hook trigger for GITScm polling`** in Jenkins job<br/>
 >
 > > **Trigger the Pipeline**<br/>
 > > Click **`Build Now`** in Jenkins
 
-#### **8. CD – Continuous Deployment Setup**<br/>
+#### **8. CD â€“ Continuous Deployment Setup**<br/>
 **Prerequisites:**<br/>
 Before configuring CD, make sure the following tools are installed:<br/>
 * Installations Required:<br/>
@@ -337,7 +348,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ### **Deploy Your Application in Argo CD GUI**<br/>
 
-> 1. On the Argo CD homepage, click on the “New App” button.<br/>
+> 1. On the Argo CD homepage, click on the â€œNew Appâ€ button.<br/>
 
 > 2. Fill in the following details:<br/>
 >  -  **Application Name:**
@@ -353,13 +364,13 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 > - **Path:** 
  `Kubernetes` (or the actual path inside the repo where your manifests reside)
 
-> 4. In the “Destination” section:
+> 4. In the â€œDestinationâ€ section:
 >  -  **Cluster URL:**
  https://kubernetes.default.svc (usually shown as "default")
 >  -    **Namespace:**
  tws-e-commerce-app (or your desired namespace)
 
-> 5. Click on “Create”.
+> 5. Click on â€œCreateâ€.
 
 ## Nginx ingress controller:<br/>
 > 1. Install the Nginx Ingress Controller using Helm:
@@ -496,3 +507,4 @@ kubectl get svc nginx-ingress-ingress-nginx-controller -n ingress-nginx -o jsonp
 ![EasyShop Website Screenshot](./public/Deployed.png)
 
 ### Your project is now deployed.
+
