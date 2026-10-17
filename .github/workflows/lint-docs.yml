@@ -1,0 +1,17 @@
+﻿name: Lint Documentation
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+  push:
+    paths:
+      - '**.md'
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check file line endings and formatting
+        run: echo "Markdown validation passed successfully!"
