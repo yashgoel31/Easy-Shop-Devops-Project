@@ -12,3 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Actions CI workflow for linting and security scanning.
 - CloudWatch log retention and alarms configuration via Terraform.
 - ServiceMonitor CRD for Prometheus metrics scraping.
+
+## [1.2.1] - 2026-10-18
+### Added
+- S3 bucket versioning and encryption configuration in Terraform.
+- Kubernetes ResourceQuota and LimitRange limits for production namespace.
+- Automated migration rollback utilities in TypeScript.
